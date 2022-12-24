@@ -18,7 +18,7 @@ function SearchBar() {
       <label htmlFor="search">Look for some Yummys ! </label>
       
       <div className="input-container">
-        <input type="text" id='search' value={searchedFor.search} onChange={(e) => setSearchedFor(prev => ({...prev, search: e.target.value}))}/>
+        <input type="text" id='search' value={searchedFor.search} onChange={(e) => setSearchedFor(prev => ({ searchThrough: "name", search: e.target.value}))} autoFocus="autofocus"/>
 
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>

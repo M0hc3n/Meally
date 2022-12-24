@@ -14,12 +14,24 @@ const useFetch = (searchedFor) =>{
     const fetchData = async (url) => {
         setLoading(true)
 
+        console.log(url);
+
         try {
             const res = await fetch(url)
             const data = await res.json()
 
+            console.log(data);
+
             if(data){
-                setData( data )
+
+                if(searchedFor.searchThrough == REQUEST_BY_NAME_KEY){
+                    setData( data.results )
+                } else if (searchedFor.searchThrough == REQUEST_URL_ALL_KEY ) {
+                    setData( data.recipes )
+                } else{
+                    setData( data )
+                }
+                
             } else{
                 console.log("could not retrieve requested data");
             }

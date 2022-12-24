@@ -17,10 +17,10 @@ function Home() {
 
   if (loading){
     return (
-    <>
+    <div className='home-container'>
       <SearchBar />
       <Loading />
-    </>
+    </div>
     )  
   }
 
@@ -30,11 +30,13 @@ function Home() {
 
   console.log(receipes);
 
-  const foodItems = receipes?.recipes?.map( receipe => {
+  const foodItems = receipes?.map( receipe => {
     return (
       <FoodItem key={receipe.id} {...receipe}/>
     )
   })
+
+  console.log(foodItems);
 
   return (
     <main className='home-container'>

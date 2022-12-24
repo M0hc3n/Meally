@@ -1,5 +1,5 @@
 
-const API_KEY = "GET YOUR OWN"
+const API_KEY = ""
 
 const REQUEST_URL_ALL_KEY = "all"
 const DEFAULT_REQUEST_URL = "https://api.spoonacular.com/recipes/random"
